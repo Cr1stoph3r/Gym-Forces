@@ -1,0 +1,171 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block contenido %}
+
+<div class="slideshow">
+    <ul class="slider">
+        <li>
+            <img src="{% static 'main/img/slider1.jpg' %}" alt="">
+        <section class="caption">
+            <h1>Gimnasio</h1>
+            <p>Inscribete en nuestro gimnasio y mejora fisicamente dia a dia</p>
+        </section>
+          </li>      
+          <li>
+              <img src="{% static 'main/img/slider2.jpg' %}" alt="">
+          <section class="caption">
+              <h1>Krav maga</h1>
+              <p>Inscribete en krav maga y aumenta tu seguridad aprendiendo defensa personal</p>
+          </section>
+            </li>         
+            <li>
+              <img src="{% static 'main/img/slider3.jpg' %}" alt="">
+          <section class="caption">
+              <h1>Yoga</h1>
+              <p>Inscribete en yoga y ten más control de tu cuerpo y mente</p>
+          </section>
+            </li>            
+    </ul>
+    <ul class="pagination">
+      </ul>
+<div class="left">
+   <span class="fa fa-chevron-left"></span>
+</div>
+<div class="right">
+  <span class="fa fa-chevron-right"></span>
+</div>
+  </div>
+  <section class="portafolio">
+      <div class="contenedor">
+          <h2 class="titulo">Nuestros servicios</h2>
+          <div class="galeria-port">
+              <div class="imagen-port">
+                  <img src="{% static 'main/img/gym.jpg' %}" alt="">
+                  <a href="#gym"><div class="hover-galeria">
+                      <img src="{% static 'main/img/icono1.png' %}" alt="">
+                      <p>Averigua más de gym</p>
+                  </div></a>
+              </div>
+              <div class="imagen-port">
+                  <img src="{% static 'main/img/krav-maga.jpg' %}"  alt="">
+                  <a href="#krav"><div class="hover-galeria">
+                      <img src="{% static 'main/img/icono1.png' %}" alt="">
+                      <p>Averigua más de krav maga</p>
+                  </div></a>
+              </div>
+              <div class="imagen-port">
+                  <img src="{% static 'main/img/yoga.jpg' %}"  alt="">
+                  <a href="#yoga"><div class="hover-galeria">
+                      <img src="{% static 'main/img/icono1.png' %}" alt="">
+                      <p>Averigua más de yoga</p>
+                  </div></a>
+              </div>
+          </div>
+      </div>
+  </section>
+  <section class="contenedor sobre-nosotros">
+      <h2 class="titulo">Quienes somos</h2>
+      <div class="contenedor-sobre-nosotros">
+          <div class="contenido-textos">
+              <h3><span>1</span>¿Quienes somos?</h3>
+              <p>Somos una empresa que da inicio en el año 2015. Notabamos que de por si las personas
+                  tenian una autoestima demasiado baja, nos propusimos implementar talleres de defansa, yoga y gimnasio,
+                  los cuales si se toma una disciplina y disposicion se lograra aumentar la seguridad en la persona
+                  que lo practique.
+              </p>
+              </div>
+              <img src="{% static 'main/img/nosotros.jpg' %}"  alt="" class="imagen-about-us">
+      </div>
+  </section>
+  <section class="contenedor sobre-nosotros">
+      <h2 class="titulo"><a name="Servicios">Nuestros servicios</a></h2>
+      <div class="contenedor-sobre-nosotros" name="gym">
+          <img src="{% static 'main/img/gym2.jpg' %}"  alt="" class="imagen-about-us">
+          <div class="contenido-textos">
+              <h3><span>1</span>Gimnasio</h3>
+              <p>Nuestro gimnasio cuenta con varios implementos que ayudaran a nuestros clientes a obtener
+                  beneficios de manera rapida y segura.
+              </p>
+              <p>Contamos con horarios de:</p>
+              <li>Lunes - viernes: 10:00 a.m. - 23:00 p.m.</li>
+              <li>Sabado-Domingo y festivos: 12:00 a.m. - 21:00 p.m.</li>
+              <p>Valores mensuales:</p>
+              <li>2 dias a la semana: $20000</li>
+              <li>3 dias a la semana: $25000</li>
+              <li>4 dias a la semana: $30000</li>
+              <li>5 dias o más: $35000</li>
+              <br>
+              <a href="../main/registro"><button id="Enviar">Registrarse</button></a>
+           </div>
+      </div>
+      <div class="contenedor-sobre-nosotros">
+          <div class="contenido-textos" name="krav">
+              <h3><span>2</span>Krav Maga</h3>
+              <p>
+                  Esta forma de combate cuerpo a cuerpo incluye métodos de defensa contra uno o varios atacantes, en respuesta a una amplia y variada gama de agresiones. Abarca tanto agresiones sin armas, con armas y contundentes. También comprende técnicas de desarme y defensa contra portadores de diversos tipos de objetos.
+                  
+              </p>
+              <p>                    En el krav magá se utilizan todo tipo de técnicas a manos vacías así como técnicas avanzadas con armas simples.</p>
+           <p>Clases y costo mensual:</p>
+           <li>Clases toda la semana desde las 19:00 p.m.</li>
+           <li>1 clase por semana: $20000</li>
+           <li>2 clases por semana: $35000</li>
+           <li>3 clases por semana: $45000</li>
+           <br>
+           <a href="../main/registro"><button id="Enviar">Registrarse</button></a>
+          </div>
+           <img src="{% static 'main/img/kravmaga2.jpg' %}"  alt="" class="imagen-about-us">
+      </div>
+      <div class="contenedor-sobre-nosotros">
+          <img src="{% static 'main/img/yoga2.jpg' %}"  alt="" class="imagen-about-us">
+          <div class="contenido-textos" name="yoga">
+              <h3><span>3</span>Yoga para la salud</h3>
+              <p>
+                  El yoga es una práctica que conecta el cuerpo, la respiración y la mente. Esta práctica utiliza posturas físicas, ejercicios de respiración y meditación para mejorar la salud general. El yoga se desarrolló como una práctica espiritual hace miles de años. Hoy en día la mayoría de las personas en occidente hace yoga como ejercicio y para reducir el estrés.
+              </p>
+              <h3>Los beneficios del yoga</h3>
+              <p>El yoga puede mejorar el nivel general de su estado físico y mejorar su postura y su flexibilidad. También puede:</p>
+              <li>Reducir su presión arterial y su frecuencia cardíaca</li>
+              <li>Ayudarle a relajarse</li>
+              <li>Mejorar su confianza</li>
+              <li>Reducir el estres</li>
+              <li>Mejorar su coordinación</li>
+              <li>Mejorar su concentración</li>
+              <li>Ayuda a dormir mejor</li>
+              <li>Ayudar a la digestión</li>
+              <li>Depresión</li>
+              <li>Ansiedad</li>
+              <li>Dolor de espalda</li>
+              <p>Clases todos los dias de la semana con horario de 17:00 p.m. - con costo de servucui de:</p>
+              <li>1 clase por semana: $15000</li>
+              <li>2 clases por semana: $25000</li>
+              <li>3 clases por semana: $35000</li>
+              <br>
+              <a href="../main/registro"><button id="Enviar">Registrarse</button></a>
+           </div>
+      </div>
+  </section>
+  {% if user.is_authenticated %}
+  <section>
+      <div class="contenedor" >
+        <h2 class="titulo">Galeria de imagenes</h2>
+        {% for p in gal %}
+        <div class="galeria-port">
+          <div class="imagen-port" >
+              {% if p.imagen %}
+              <img src="{{ p.imagen.url }}" alt="">
+              {% endif %}
+          </div>
+        </div>
+        <br><br>
+          {% endfor %}
+      </div>
+  </section>
+  {% else %}
+  <div class="contenedor" >
+    <h2 class="titulo">Registrate y matriculate con nosotros</h2>
+  </div>
+  {% endif %}
+
+{% endblock %}

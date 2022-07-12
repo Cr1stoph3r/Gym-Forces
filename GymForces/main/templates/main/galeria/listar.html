@@ -1,0 +1,31 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% load humanize %}
+{% block contenido %}
+<br><br><br><br><br>
+<div class="card">
+    <div class="card-body">
+        <h2>Listado de galeria</h2>
+        <hr>
+        <table class="table table-striped table-hover table-responsive-sm">
+            <tr>
+                <th>Deporte</th>
+                <th>imagen</th>
+                <th>opciones</th>
+            </tr>
+            {% for p in gale %}
+            <tr>
+                <td>{{ p.deporte | title}}</td>
+                <td>{{ p.imagen }}</td>
+                <td>
+                    <a href="../main/modificar-imagen/{{p.id}}/" class="btn btn-info btn-sm"> Modificar</a>
+                    <a href="../main/eliminar-imagen/{{p.id}}/" class="btn btn-danger btn-sm"> Eliminar</a>
+                </td>
+            </tr>
+        
+            {% endfor %}
+        </table>
+    </div>
+</div>
+<br><br><br><br>
+{% endblock %}

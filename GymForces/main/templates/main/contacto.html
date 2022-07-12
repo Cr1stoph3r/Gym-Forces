@@ -1,0 +1,46 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'main/css/estilos2.css' %}">
+{% endblock %}
+{% block contenido %}
+<form action="" class="formulario" method="POST">
+    {% csrf_token %}
+    <div class="contenedor">
+        <h1>Contactanos!</h1>
+    <div class="input-contenedor">
+        <i class="fas fa-user icon"></i>
+        <input type="text" name="{{form.nombre.name}}" id="usuario" placeholder="Nombre Completo">
+        <br>
+    </div>
+    <div class="input-contenedor">
+        <i class="fas fa-envelope icon"></i>
+        <input type="email" name="{{form.email.name}}" id="email" placeholder="Nombre@gmail.com">
+        <br>
+    </div>
+    <div class="input-contenedor">
+        <i class="fas fa-dumbbell icon"></i>
+        <select name="{{form.deporte_consulta.name}}" id="">
+            <option value="0" >Selecciona el servicio</option>
+                <option value="1">Gimnasio</option>
+                <option value="2">Krav Maga</option>
+                <option value="3">Yoga</option>
+        </select>
+        <br>
+    </div>
+    <div class="input-contenedor">
+        <i class="fas fa-pencil-alt icon "></i>
+        <input type="text" name="{{form.mensaje.name}}"  placeholder="Escribe aqui tu consulta">
+        <br>
+    </div>
+    <div class="input-contenedor">
+        <i class="fas fa-check-square icon"></i>
+        <label for="" font-family= "Arial, Helvetica, sans-serif">Aviso</label>
+        <input type="checkbox" name="{{form.aviso.name}}">
+        <br>
+    </div>
+    <button type="submit" id="btnEnviar">Enviar</button>
+    </div>
+</form>
+{{mensaje}}
+{% endblock %}

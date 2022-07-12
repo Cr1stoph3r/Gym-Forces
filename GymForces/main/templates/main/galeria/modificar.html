@@ -1,0 +1,28 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block contenido %}
+{% load crispy_forms_tags %}
+
+        <div class="row" >
+            <div class="col-12 col-md-6 offset-md-3">
+                <br><br><br><br><br>
+                <div class="card">
+                    <div class="card-body">
+                        <h2>Modificar imagenes a pagina principal</h2>
+                        <hr>
+              <form action="" method="post" enctype="multipart/form-data">
+                  {% csrf_token %}
+                  {{ form | crispy }}
+                  <div class="d-flex justify-content-center">
+                  <input type="submit" value="Cancelar" class="btn btn-secondary">
+                  <input type="submit" value="Modificar" class="btn btn-primary">
+                  </div>
+                  <br>
+                  {{mensaje}}
+              </form>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br><br>
+{% endblock %}
